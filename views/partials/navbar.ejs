@@ -1,0 +1,39 @@
+<!-- Start Header -->
+<header class="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="row nav-row">
+                <a class="navbar-brand nav-image" href="/">
+                    <img src="/images/logo.png" alt="" /> <!-- nav bar size is dictated by image-->
+                </a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbars-rs-food"
+                    aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-rs-food">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item "><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/mealdelivery">Meal Delivery</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/programs">Programs</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/volunteer">Volunteer</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/aboutus">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/supporters">Supporters</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/pay">Pay My Bill</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/aldergrove">Aldergrove CSH</a></li>
+                        <li class="nav-item "><a id ="login-btn" class="nav-link" href="#">Volunteer Login</a></li>
+                        <li class="nav-item " style='font-weight:bold;border-radius: 4px;'><a  style='background-color:rgb(189, 125, 22)' class="nav-link" href="/donate">Donate</a></li>
+                        <!-- <li class="nav-item " style='background-color:rgb(189, 125, 22);font-weight:bold;border-radius: 4px;'><a class="nav-link" href="/donate">Login</a></li> -->
+                        <% if(user) { %>
+                            
+                            <% if(typeof page !== 'undefined') { %>
+                            <li class="nav-item btn-primary" style=' border-radius: 4px;'><a class="nav-link" href=<%=/add/ + page.page%>>Add New Item</a></li>
+                            <%}%>
+                            <li class="nav-item " style='background-color: yellowgreen; border-radius: 4px;'><a class="nav-link" href="/logout">Logout</a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Header -->

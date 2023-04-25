@@ -1,0 +1,133 @@
+﻿	<!-- Start Banner -->
+	<div class="all-page-title page-breadcrumb-donate">
+		<div class="container text-center">
+			<div class="row">
+				<% page.details.forEach(function (contentBox) { %>
+					<% if (contentBox.contentType == "banner") { %>
+						<div class="col-lg-12" >
+							<h1 class="lead"><%- contentBox.title %></h1>
+							<span class="lead" style="color: white; font-size: x-large;">
+								<% const textArray = contentBox.description.split("\n"); %>
+
+								<% textArray.forEach(function (text) { %>
+									<%- text %>
+									<br>
+								<% }) %>
+								<br>	
+								<%if (contentBox.hasButton == "True") { %>
+								<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+								<%}%>
+							</span>
+							<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+							<% } %>
+						</div>
+				<% }}); %>
+			</div>
+		</div>
+	</div>
+	<!-- End Banner -->
+	<br>
+	<!-- Start Intro -->
+	<div class="container">
+		<div class="row" style="width: 100%; display: inline-flex;">
+			<div style="flex: auto; text-align: center;"> 
+			<h3> <strong>Donate to Langley Meals on Wheels below:</strong></h3>
+			<form action="https://www.paypal.com/donate" method="post" target="_top">
+				<input type="hidden" name="hosted_button_id" value="NUTWUPHBQ3M4C" />
+				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit"
+					title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" style="width: 230px;"/>
+				<img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
+			</form>
+			</div>
+			<div style="flex: auto; text-align: center;"> 
+				<h3> <strong>Donate to Aldergrove Community Station House below:</strong></h3>
+				<form action="https://www.paypal.com/donate" method="post" target="_top">
+					<input type="hidden" name="hosted_button_id" value="97YUYUY3MGK7G" />
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit"
+						title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" style="width: 230px;"/>
+					<img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
+				</form>
+			</div>
+		</div>
+		<% page.details.forEach(function (contentBox) { %>
+			<% if (contentBox.contentType == "intro1") { %>
+				<div class="container" style="text-align: center;">
+
+					<% if (contentBox.imagePath != "") { %>
+					<img src="<%=contentBox.imagePath%>" style= "max-height:300px">
+					<%}%>
+					<!-- <h2 style="font-size: xx-large;"><%-contentBox.title %></h2> -->
+					<br>
+					<span style = "font-size: 20px; color: black; line-height: 1;">
+						<% const textArray = contentBox.description.split("\n"); %>
+						<% textArray.forEach(function (text) { %>
+							<%- text %>
+							<br>
+							
+						<% }) %>
+						<br>
+						
+						<%if (contentBox.hasButton == "True") { %>
+							<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+						<%}%>
+						</span>
+						<% if(user) { %>
+					<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+					<%}%>
+				</div>
+		<%}})%>
+		<% page.details.forEach(function (contentBox) { %>
+			<% if (contentBox.contentType == "intro2") { %>
+				<div class="container" style="text-align: center;">
+
+					<% if (contentBox.imagePath != "") { %>
+					<img src="<%=contentBox.imagePath%>" style= "max-height:300px">
+					<%}%>
+					<br>
+					<br>
+					<span style = "font-size: 20px; color: black; line-height: 1;">
+						<% const textArray = contentBox.description.split("\n"); %>
+						<% textArray.forEach(function (text) { %>
+							<%- text %>
+							<br>
+							
+						<% }) %>
+						<br>
+						
+						<%if (contentBox.hasButton == "True") { %>
+							<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+						<%}%>
+						</span>
+						<% if(user) { %>
+					<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+					<%}%>
+				</div>
+		<%}})%>
+		<% page.details.forEach(function (contentBox) { %>
+			<% if (contentBox.contentType == "textBlock") { %>
+				<div class="container" style="text-align: center;">
+
+					<% if (contentBox.imagePath != "") { %>
+					<img src="<%=contentBox.imagePath%>" style= "max-height:300px">
+					<%}%>
+					<br>
+					<span style = "font-size: 20px; color: black; line-height: 1;">
+						<% const textArray = contentBox.description.split("\n"); %>
+						<% textArray.forEach(function (text) { %>
+							<%- text %>
+							<br>
+							
+						<% }) %>
+						<br>
+						<%if (contentBox.hasButton == "True") { %>
+							<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+						<%}%>
+						</span>
+						<% if(user) { %>
+					<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+					<%}%>
+					<br>
+				</div>
+		<%}})%>
+	</div>

@@ -1,0 +1,206 @@
+	<!-- Start Banner -->
+	<div class="all-page-title page-breadcrumb-pay">
+		<div class="container text-center">
+			<div class="row">
+				<% page.details.forEach(function (contentBox) { %>
+					<% if (contentBox.contentType == "banner") { %>
+						<div class="col-lg-12" >
+							<h1 class="lead"><%- contentBox.title %></h1>
+							<span class="lead" style="color: white; font-size: x-large;">
+								<% const textArray = contentBox.description.split("\n"); %>
+
+								<% textArray.forEach(function (text) { %>
+									<%- text %>
+									<br>
+								<% }) %>
+								<br>	
+								<%if (contentBox.hasButton == "True") { %>
+								<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+								<%}%>
+							</span>
+							<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+							<%}%>
+						</div>
+				<% }}); %>
+			</div>
+		</div>
+	</div>
+	<!-- End Banner -->
+	<br /><br />
+	<div class="container">
+		<div class="row">
+			<div class="row" style='margin:0px 16px'>
+				<%page.details.forEach(function (contentBox){ %>
+					<% if (contentBox.contentType == "textBlock") { %>
+
+						<div class="col-lg-6" style='padding:16px'>
+							<h2><strong><%- contentBox.title %></strong></h2>
+							<span style = "font-size: 18px; color: black; line-height: 1;">
+								<% const textArray = contentBox.description.split("\n"); %>
+
+								<% textArray.forEach(function (text) { %>
+									<%- text %>
+									<br>
+								<% }) %>
+								<br>
+							
+								<%if (contentBox.hasButton == "True") { %>
+									<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+								<%}%>
+							</span>
+							<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+							<%}%>
+						</div>
+				<% }})%>
+				<%page.details.forEach(function (contentBox){ %>
+					<% if (contentBox.contentType == "payBox") { %>
+
+						<div class="col-lg-6" style='padding:16px'>
+							<h2><strong><%- contentBox.title %></strong></h2>
+							<span style = "font-size: 18px; color: black; line-height: 1;">
+								<% const textArray = contentBox.description.split("\n"); %>
+
+								<% textArray.forEach(function (text) { %>
+									<%- text %>
+									<br>
+								<% }) %>
+								<br>
+							
+								<%if (contentBox.hasButton == "True") { %>
+									<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+								<%}%>
+							</span>
+							<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+							<%}%>
+
+
+
+
+
+							<div id="smart-button-container" style="font-size: large; color: black;">
+								<div style="text-align: left"><label for="description" style='width:116px;margin-right:16px'>Client Name: </label><input type="text"
+										name="descriptionInput" id="description" maxlength="127" value="" style='width: 240px;' ></div>
+								<p id="descriptionError" style="visibility: hidden; color:red; text-align: left;">Please enter a
+									description</p>
+								<div style="text-align: left"><label for="amount" style='width:116px;margin-right:16px'>Total Payment: </label><input name="amountInput"
+										type="number" id="amount" value="" style='width: 80px;'><span> CAD</span></div>
+								<p id="priceLabelError" style="visibility: hidden; color:red; text-align: left;">Please enter a
+									price</p>
+								<div id="invoiceidDiv" style="text-align: left; display: none;"><label for="invoiceid" style='width:116px;margin-right:16px'>Note:
+									</label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" style='width: 100%;'></div>
+								<p id="invoiceidError" style="visibility: hidden; color:red; text-align: left;">Please enter an
+									Invoice ID</p>
+								<div style="text-align: left; margin-top: 0.625rem;" id="paypal-button-container"></div>
+							</div>
+							<script src="https://www.paypal.com/sdk/js?client-id=AX2hWzrPaxxJGJNqlqeFbRxxTbIA5WARrOA6QDy7FECaik1hieTRLK3Ff0xxn-fiPKfaDDMmjCYRPovK&currency=CAD"
+								data-sdk-integration-source="button-factory"></script>
+							<script>
+								function initPayPalButton() {
+									var description = document.querySelector('#smart-button-container #description');
+									var amount = document.querySelector('#smart-button-container #amount');
+									var descriptionError = document.querySelector('#smart-button-container #descriptionError');
+									var priceError = document.querySelector('#smart-button-container #priceLabelError');
+									var invoiceid = document.querySelector('#smart-button-container #invoiceid');
+									var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
+									var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
+
+									var elArr = [description, amount];
+
+									if (invoiceidDiv.firstChild.innerHTML.length > 1) {
+										invoiceidDiv.style.display = "block";
+									}
+
+									var purchase_units = [];
+									purchase_units[0] = {};
+									purchase_units[0].amount = {};
+
+									function validate(event) {
+										return event.value.length > 0;
+									}
+
+									paypal.Buttons({
+										style: {
+											color: 'blue',
+											shape: 'rect',
+											label: 'pay',
+											layout: 'vertical',
+
+										},
+
+										onInit: function (data, actions) {
+											actions.disable();
+
+											if (invoiceidDiv.style.display === "block") {
+												elArr.push(invoiceid);
+											}
+
+											elArr.forEach(function (item) {
+												item.addEventListener('keyup', function (event) {
+													var result = elArr.every(validate);
+													if (result) {
+														actions.enable();
+													} else {
+														actions.disable();
+													}
+												});
+											});
+										},
+
+										onClick: function () {
+											if (description.value.length < 1) {
+												descriptionError.style.visibility = "visible";
+											} else {
+												descriptionError.style.visibility = "hidden";
+											}
+
+											if (amount.value.length < 1) {
+												priceError.style.visibility = "visible";
+											} else {
+												priceError.style.visibility = "hidden";
+											}
+
+											if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
+												invoiceidError.style.visibility = "visible";
+											} else {
+												invoiceidError.style.visibility = "hidden";
+											}
+
+											purchase_units[0].description = 'PAYMENT: ' + description.value;
+											purchase_units[0].amount.value = amount.value;
+
+											if (invoiceid.value !== '') {
+												purchase_units[0].invoice_id = invoiceid.value;
+											}
+										},
+
+										createOrder: function (data, actions) {
+											return actions.order.create({
+												purchase_units: purchase_units,
+											});
+										},
+
+										onApprove: function (data, actions) {
+											return actions.order.capture().then(function (details) {
+												alert('Thank you for your payment ' + details.payer.name.given_name +'!' );
+												window.location.reload(false);
+											});
+										},
+
+										onError: function (err) {
+											console.log(err);
+										}
+									}).render('#paypal-button-container');
+								}
+								initPayPalButton();
+							</script>
+						</div>
+				<% }})%>
+				</div>
+			</div>
+			<br /><br />
+		</div>
+		<br /><br />
+	</div>

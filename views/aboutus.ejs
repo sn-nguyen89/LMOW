@@ -1,0 +1,201 @@
+	<!-- Start Banner -->
+	<div class="all-page-title page-breadcrumb-about">
+		<div class="container text-center">
+			<div class="row">
+				<% page.details.forEach(function (contentBox) { %>
+					<% if (contentBox.contentType == "banner") { %>
+						<div class="col-lg-12" >
+							<h1 class="lead"><%- contentBox.title %></h1>
+							<span class="lead" style="color: white; font-size: x-large;">
+								<% const textArray = contentBox.description.split("\n"); %>
+
+								<% textArray.forEach(function (text) { %>
+									<%- text %>
+									<br>
+								<% }) %>
+								<br>	
+								<%if (contentBox.hasButton == "True") { %>
+								<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+								<%}%>
+							</span>
+							<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+							<%}%>
+						</div>
+				<% }}); %>
+			</div>
+		</div>
+	</div>
+	<!-- EndBanner -->
+	<br>
+
+	<!-- Start Intro -->
+	<% page.details.forEach(function (contentBox) { %>
+		<% if (contentBox.contentType == "intro") { %>
+			<div class="container" style="text-align: center;">
+
+				<!-- Shannon  Bio -->
+				<% if (contentBox.imagePath !== ""){ %>
+					<img src=<%=contentBox.imagePath%> style= "max-height:300px">
+				<% } %>
+				<h2 style="font-size: xx-large;"><%-contentBox.title %></h2>
+				<p style = "font-size: 20px; color: black; line-height: 1.5;">
+					<% const textArray = contentBox.description.split("\n"); %>
+
+					<% textArray.forEach(function (text) { %>
+						<%- text %>
+						<br>
+					<% }) %>
+					<br>
+					<%if (contentBox.hasButton == "True") { %>
+						<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+					<%}%>
+				</p>
+				<% if(user) { %>
+				<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+				<% }%>
+				<br>
+			</div>
+	<%}})%>
+	<!-- End Intro -->
+	<hr>
+
+	<!-- Start Board Section -->
+	<div class="gallery-box">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Our Board</h2>
+					</div>
+				</div>
+			</div>
+
+			<!-- Start Board Members -->
+			<div class="blog-box">
+				<div class="container">
+					<div class="row">
+						<%page.details.forEach(function (contentBox){ %>
+							<% if (contentBox.contentType == "board") { %>
+							<div class="col-lg-4 col-md-6 col-sm-12">
+								<div class="blog-box-inner">
+									<div class="blog-img-box">
+										<div>
+											<div class="c--anim-btn"style="text-align: center;">
+												<span class="c-anim-btn">
+													<p><img src=<%=contentBox.imagePath%> style="max-height: 200px"></p>
+													<h2 style="font-size: xx-large;"><b><%-contentBox.title%></b></h2>
+													<ul>
+														<li><span><%- contentBox.role %></span></li>
+													</ul>
+												</span>
+												<p style = "font-size: 18px; color: black">
+												<% const textArray = contentBox.description.split("\n"); %>
+
+												<% textArray.forEach(function (text) { %>
+													<%- text %>
+													<br>
+												<% }) %>
+												<br>
+											
+												<%if (contentBox.hasButton == "True") { %>
+													<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+												<%}%>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<% if(user) { %>
+								<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+								<%}%>
+							</div>
+						
+						<% }})%>
+					</div>
+				</div>
+			</div>
+			<!-- End Board Members -->
+
+		</div>
+	</div>
+	<!-- End Board -->
+
+	<hr style="margin-top: -100px;">
+
+
+	<!-- Start AGM -->
+	<div class="gallery-box">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Most Recent General Meetings</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<%for(let i = page.details.length-1 ; i > 0; i--){  %>
+				<% if (page.details[i].contentType == "button") {%>
+			<div class="col-lg-4 col-md-6" style = "  margin: auto; width: 50%;">
+				<a class="btn btn-lg btn-circle btn-outline-new-orange" href="<%=page.details[i].imagePath%>"
+					style='margin-bottom:16px' target="_blank"><%=page.details[i].buttonText%></a>
+			</div>
+
+			<% if(user) { %>
+				<a class="btn-edit" href=<%="/edit/" + page.page + "/" + page.details[i].id %>>Edit</a>
+				<%}%>
+				<%break;%>
+			<%}%>
+			<%}%>
+		</div>
+		
+		<br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Past General Meetings</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<%let flag = 0%>
+			<div class="row">
+				<%for(let i = page.details.length-1 ; i > 0; i--){  %>
+					<% if (page.details[i].contentType == "button" && flag == 0) {%>
+						<% flag = 1 %>
+						<% continue }%>
+					<% if (page.details[i].contentType == "button" && flag == 1) {%>
+						<div class="col-lg-4 col-md-6">
+						<a class="btn btn-lg btn-circle btn-outline-new-orange" href="<%=page.details[i].imagePath%>"
+						style='margin-bottom:16px' target="_blank"><%=page.details[i].buttonText%></a>
+						</div>				
+						<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + page.details[i].id %>>Edit</a>
+								<%}%><%}%>
+
+				<% }%>
+			</div>
+		</div>
+		<hr>
+		<div class="heading-title text-center">
+			<h2>Our Values</h2>
+			<h3 style='padding:16px;font-size: 1.5em;'>Compassionate <i class="fa fa-heart" aria-hidden="true"
+					style='margin:8px;color:rgb(192, 15, 15,.8)'></i> Collaborative<i class="fa fa-link" aria-hidden="true"
+					style='margin:8px;color:rgba(255, 166, 0, 0.6)'></i> Community-centred <i class="fa fa-users" aria-hidden="true"
+					style='margin:8px;color:rgb(24, 177, 32,.6)'></i>Integrity <i class="fa fa-lightbulb-o" aria-hidden="true"
+					style='margin:8px;color:rgb(212, 162, 22,.8)'></i>Innovation</h3>
+
+		</div>
+
+
+	</div>
+	
+</body>
+
+</html>

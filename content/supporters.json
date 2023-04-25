@@ -1,0 +1,375 @@
+{
+	"page": "supporters",
+	"details": [
+		{
+			"id": 0,
+			"title": "Langley Meals on Wheels Sponsors and Partners",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "banner"
+		},
+		{
+			"id": 1,
+			"title": "Our Supporters & Community Partners",
+			"description": "We could not do what we do without the generous support from:",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "intro"
+		},
+		{
+			"id": 2,
+			"imagePath": "/images/supporter1.png",
+			"title": "British Columbia Gaming Commission",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "supporters"
+		},
+		{
+			"id": 3,
+			"imagePath": "/images/supporter2.png",
+			"title": "The Gateway of Hope",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "supporters"
+		},
+		{
+			"id": 4,
+			"imagePath": "/images/supporter3.png",
+			"title": "Fraser Health",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "supporters"
+		},
+		{
+			"id": 5,
+			"imagePath": "/images/supporter4.png",
+			"title": "Envision Financial",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "supporters"
+		},
+		{
+			"id": 6,
+			"imagePath": "/images/supporter5.png",
+			"title": "Township of Langley",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "supporters"
+		},
+		{
+			"id": 7,
+			"imagePath": "/images/supporter6.png",
+			"title": "City of Langley",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "supporters"
+		},
+		{
+			"id": 8,
+			"imagePath": "/images/lmow1.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 9,
+			"imagePath": "/images/lmow2.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 10,
+			"imagePath": "/images/lmow3.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 11,
+			"imagePath": "/images/lmow4.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 12,
+			"imagePath": "/images/lmow5.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 13,
+			"imagePath": "/images/lmow6.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 14,
+			"imagePath": "/images/lmow7.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 15,
+			"imagePath": "/images/lmow8.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 16,
+			"imagePath": "/images/lmow9.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 17,
+			"imagePath": "/images/lmow10.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 18,
+			"imagePath": "/images/lmow11.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 19,
+			"imagePath": "/images/lmow12.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 20,
+			"imagePath": "/images/lmow13.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 21,
+			"imagePath": "/images/lmow14.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 22,
+			"imagePath": "/images/lmow15.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 23,
+			"imagePath": "/images/lmow16.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 24,
+			"imagePath": "/images/lmow17.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 25,
+			"imagePath": "/images/lmow18.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 26,
+			"imagePath": "/images/lmow19.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 27,
+			"imagePath": "/images/lmow20.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 28,
+			"imagePath": "/images/lmow21.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 29,
+			"imagePath": "/images/lmow22.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 30,
+			"imagePath": "/images/lmow23.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 31,
+			"imagePath": "/images/lmow24.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 32,
+			"imagePath": "/images/lmow25.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 33,
+			"imagePath": "/images/ff3.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 34,
+			"imagePath": "/images/ff4.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 35,
+			"imagePath": "/images/ff5.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		},
+		{
+			"id": 36,
+			"imagePath": "/images/ff6.png",
+			"title": "image",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "lmow"
+		}
+	]
+}

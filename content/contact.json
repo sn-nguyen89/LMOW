@@ -1,0 +1,15 @@
+{
+	"page": "contact",
+	"details": [
+		{
+			"id": 0,
+			"title": "We're happy to answer your questions",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "banner"
+		}
+	]
+}

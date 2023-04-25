@@ -1,0 +1,115 @@
+{
+	"page": "aldergrove",
+	"details": [
+		{
+			"id": 0,
+			"title": "Welcome to the Aldergrove Community Station House",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "banner"
+		},
+		{
+			"id": 1,
+			"title": "",
+			"description": "The Aldergrove Community Station House will be a space to support the community and offer a range of programs, services, and gathering places. There will be opportunities to increase access to healthy, safe, culturally appropriate programs along with local food partnerships that enhance food security. There will be opportunities to volunteer and join programs that will be provided by many community partners.",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "/images/acsh/Meals--1 Web.jpg",
+			"contentType": "intro"
+		},
+		{
+			"id": 2,
+			"title": "Kitchen",
+			"description": "Kitchen Langley Meals on Wheels will lead the Hub producing healthy and nutritious food in the kitchen growing and expanding the reach into the community and partnerships and continue to provide food and supports to all of Langley. ",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "/images/acsh/Meals--20 Web.jpg",
+			"contentType": "row"
+		},
+		{
+			"id": 3,
+			"title": "",
+			"description": "We are very excited to finally have a space to create our meals, making sure we are providing nutritious and healthy meals to our clients. This opportunity will allow us to escalate our ability to fund our program and provide direct service and meals to all that need it. ",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "/images/acsh/Meals--24 Web.jpg",
+			"contentType": "row"
+		},
+		{
+			"id": 4,
+			"title": "",
+			"description": "Building our community kitchen to create space that is centered around food and nutrition, and to build a community which fosters a culture of healthy food and education.",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "/images/acsh/Meals--27 Web.jpg",
+			"contentType": "row"
+		},
+		{
+			"id": 5,
+			"title": "The programs included will be ",
+			"description": "- meal provision and food services\n- food skills and educational programming\n- food rescue\n- social venture\n- internet café service\n- community celebrations and gatherings\n- multicultural community meals.",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "/images/acsh/Meals--36 Web.jpg",
+			"contentType": "row"
+		},
+		{
+			"id": 8,
+			"title": "Café",
+			"description": "Café Operated by LMOW staff and volunteers\n- 40 seats Café at street front, focused on creating a safe space for community members to connect,socialize and to meet a friend for lunch or coffee\n- Open daily to the public Meal of the Day - dine in or take out \n- Soup and Sandwiches \n- Coffee and Tea Daily baked goods - muffin, loafs, cookies \n- daily grab and go meals",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "/images/acsh/Meals--11 Web.jpg",
+			"contentType": "row"
+		},
+		{
+			"id": 9,
+			"title": "Facility Access",
+			"description": "- Commercial Kitchen Rentals - afterhours\n- Multi purpose rooms & Office Space- upstairs and down\n- Community Partners - onsite for 1-1 and group support \n- Artisan Sales - Local artisans will sell their products\n- Spoons on Fire - LMOW social enterprise sales",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "/images/acsh/Meals--33 Web.jpg",
+			"contentType": "row"
+		},
+		{
+			"id": 10,
+			"title": "",
+			"description": "Internet café and Business Centre where patrons can: make use of free WIFI and a lending library of tablets. Printing services for those that need documents or resumes. Skill building and education session around internet, iPad use will be offered. Monthly Seminars from local business",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "video"
+		},
+		{
+			"id": 6,
+			"title": "eat, learn, play & grow throughout their lives\n\n",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "/images/Neighbourhood House.mp4",
+			"contentType": "video"
+		},
+		{
+			"id": 7,
+			"title": "If you would like learn more please contact Shannon Woykin at shannonw@lmow.ca or 604-313-8074 or Barb Stack at barbs@lmow.ca or 604-202-0335.",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "outro"
+		}
+	]
+}

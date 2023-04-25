@@ -1,0 +1,246 @@
+
+  <div style="padding-top: 200px; width: 75%; margin: auto;" >
+    <h1 class="page-header">Edit Content</h1>
+    <form action=<%= "/update/" + origin + "/" + content.id %> method="POST">
+  
+      <% if (typeof content.contentType === 'undefined') { %>
+        <div>Content Type</div>
+        <% if (origin !== "index") { %> 
+        <div class="radio">
+          <input type="radio" id="top-radio-1" value="banner" name="contentType" onclick="contentTypeChange(this)">
+          <label for="top-radio-1">Banner</label>
+        </div>
+        <% } %>
+        <% if (origin !== "programs" && origin !== "pay" && origin !== "index" && origin !== "contact") { %>
+          <div class="radio">
+            <input type="radio" id="top-radio-2" value="intro" name="contentType" onclick="contentTypeChange(this)">
+            <label for="top-radio-2">Intro</label>
+          </div>
+        <% } %>
+        <% if (origin == "index" || origin == "mealdelivery" || origin == "programs" || origin == "volunteer") { %>
+        <div class="radio">
+          <input type="radio" id="top-radio-3" value="contentBox" name="contentType" onclick="contentTypeChange(this)"> 
+          <label for="top-radio-3">Content Box</label>
+        </div>
+        <% } %>
+        <% if (origin == "supporters") { %>
+        <div class="radio">
+          <input type="radio" id="top-radio-4" value="supporters" name="contentType" onclick="contentTypeChange(this)">
+          <label for="top-radio-4">Supporter</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="top-radio-5" value="lmow" name="contentType" onclick="contentTypeChange(this)">
+          <label for="top-radio-5">LMOW Partner</label>
+        </div>
+        <% } %>
+        <% if (origin == "aboutus") { %>
+        <div class="radio">
+          <input type="radio" id="top-radio-6" value="board" name="contentType" onclick="contentTypeChange(this)">
+          <label for="top-radio-6">Board Member</label>
+        </div>
+        <% } %>
+        <% if (origin == "signup" || origin == "pay" || origin == "donate") { %>
+        <div class="radio">
+          <input type="radio" id="top-radio-7" value="textBlock" name="contentType" onclick="contentTypeChange(this)">
+          <label for="top-radio-7">Text Block</label>
+        </div>
+        <% } %>
+        <% if (origin == "aldergrove") { %>
+          <div class="radio">
+            <input type="radio" id="top-radio-8" value="row" name="contentType" onclick="contentTypeChange(this)">
+            <label for="top-radio-8">Rows</label>
+          </div>
+          <% } %>
+        <% if (origin == "volunteer" || origin == "signup" || origin == "aldergrove") { %>
+        <div class="radio">
+          <input type="radio" id="top-radio-9" value="outro" name="contentType" onclick="contentTypeChange(this)">
+          <label for="top-radio-9">Outro</label>
+        </div>
+        <% } %>
+        <% if (origin == "index") { %>
+          <div class="radio">
+            <input type="radio" id="top-radio-10" value="updates" name="contentType" onclick="contentTypeChange(this)">
+            <label for="top-radio-10">Updates</label>
+          </div>
+          <% } %>
+          <% if (origin == "volunteer") { %>
+            <div class="radio">
+              <input type="radio" id="top-radio-11" value="button" name="contentType" onclick="contentTypeChange(this)">
+              <label for="top-radio-11">PDF Button</label>
+            </div>
+            <% } %>
+            <% if (origin == "aboutus") { %>
+              <div class="radio">
+                <input type="radio" id="top-radio-12" value="button" name="contentType" onclick="contentTypeChange(this)">
+                <label for="top-radio-12">Report</label>
+              </div>
+              <% } %>
+      <% } %>
+
+
+      <!-- Start Title -->
+      <% if (content.contentType == "button") { %>
+        <div class="form-group" id="titleBox" style="visibility: hidden; max-height: 0px;">
+      <% }else{ %>
+        <div class="form-group" id="titleBox">
+      <% } %>
+         <label for="title">Title</label>
+        <input type="text" class="form-control" id="titleInput" placeholder="Enter title" name="title" value="<%= content.title %>">
+      </div>
+      <!-- End Title -->
+<!--       
+      <h2>Hint:</h2>
+      <h3>Surround text with "&ltb&gt&lt/b&gt" to <b>bold</b>. "&ltu&gt&lt/u&gt" to <u>underline</u>. "&lti&gt&lt/i&gt" to <i>italicize</i>. </h3>
+      <h3><b>For example:</b> " <i>&ltb&gtLangley Meals&lt/b&gt on Wheels</i> " will display as <b>Langley Meals</b> on Wheels</h3> -->
+
+
+      <!-- Start Description -->
+      <% if (content.contentType == "button") { %>
+      <div class="form-group" id="descriptionBox" style="visibility: hidden; max-height: 0px;">
+      <% }else{ %>
+      <div class="form-group" id="descriptionBox" style="max-height: 50000px;">
+      <% } %>
+        <label for="description">Description. </label> 
+        <textarea class="form-control" id="descriptionInput" rows="5" placeholder="Enter description" name="description"><%= content.description %></textarea>
+      </div>
+      <!-- End Description -->
+
+      
+      <!-- Start Board Member Roles -->
+      <% if (content.contentType == "board") { %>
+        <div class="form-group" id="role-selection" style="max-height: 5000px;">
+      <% }else{ %>
+        <div class="form-group" id="role-selection" style="visibility: hidden; max-height: 0px;">
+      <%}%>
+          <label for="role">Position</label>
+          <input type="text" class="form-control" id="roleInput" placeholder="Enter Role" name="role" value="<%= content.role %>">
+        </div>
+
+      <!-- Start Buttons -->
+      <div style="display: inline-flex; width: 100%;">
+        <div class="form-group" style="flex: 10%;">
+          <label for="hasButton">Has Button</label>
+
+        <% if (content.hasButton == "True" || content.contentType == 'button' ){ %>
+          <div class="radio">
+            <input type="radio" id="button-radio-1" value="True" name="buttonCheck" checked onclick="radioChange(this)">
+            <label for="button-radio-1">Has Button</label>
+          </div>
+          <%if (content.contentType == 'button') { %>
+          <div class="radio" style="visibility: hidden; max-height: 0px;">
+          <% }else{ %>
+          <div class="radio">
+          <% } %>
+            <input type="radio" id="button-radio-2" value="False" name="buttonCheck" onclick="radioChange(this)">
+            <label for="button-radio-2">No Button</label>
+          </div>
+        <% } else {%>
+          <div class="radio">
+            <input type="radio" id="button-radio-1" value="True" name="buttonCheck" onclick="radioChange(this)">
+            <label for="button-radio-1">Has Button</label>
+          </div>
+          <div class="radio">
+            <input type="radio" id="button-radio-2" value="False" name="buttonCheck" checked onclick="radioChange(this)">
+            <label for="button-radio-2">No Button</label>
+          </div>
+          <%}; %>
+
+        </div>
+        
+        <!-- If there are buttons -->
+        <% if (content.hasButton == "True") { %>
+
+          <!-- Button Text -->
+          <div class="form-group button-optional" id="button-text-div" style="flex: 30%; margin: 0px 30px;">
+            <label for="buttonText">Button Text</label>
+            <input type="text" class="form-control" id="buttonText" placeholder="Button Text" name="buttonText" value="<%= content.buttonText %>">
+          </div>
+
+          <!-- Button Link -->
+          <div class="form-group button-optional" id="button-link-div" style="flex: 60%;">
+            <label for="buttonLink">Button Link</label>
+            <input type="text" class="form-control" id="buttonLink" placeholder="Button Link" name="buttonLink" value="<%= content.buttonLink %>">
+          </div>
+
+        <% }else { %>
+
+          <!-- Button Text -->
+          <div class="form-group button-optional" id="button-text-div" style="flex: 30%; margin: 0px 30px; visibility: hidden;">
+            <label for="buttonText">Button Text</label>
+            <input type="text" class="form-control" id="buttonText" placeholder="Button Text" name="buttonText" value="<%= content.buttonText %>">
+          </div>
+
+          <!-- Button Link -->
+          <div class="form-group button-optional" id="button-link-div" style="flex: 60%; visibility: hidden;">
+            <label for="buttonLink">Button Link</label>
+            <input type="text" class="form-control" id="buttonLink" placeholder="Button Link" name="buttonLink" value="<%= content.buttonLink %>">
+          </div>
+        <% } %> 
+      </div>
+      <!-- End Buttons -->
+
+      <!-- Start Images -->
+      <% if (content.contentType == "intro" || content.contentType == "contentBox" || content.contentType == "supporters" || content.contentType == "lmow" || content.contentType == "board" || (content.contentType == "banner" && origin == "index")) { %>
+        <div class="form-group" id="currentImage">
+      <% }else{ %>
+        <div class="form-group" id="currentImage" style="visibility: hidden; max-height: 0px;">
+      <% } %>
+          <p> Current Image</p>
+          <div class="row">
+            <div>
+              <img src="<%=content.imagePath%>" style="margin-top:-5px; max-width: 500px; max-height: 500px;">
+            </div>
+
+          </div>
+          <div class="ml-auto mr-auto">
+            <a class="btn-warning" href=<%="/editimage/" + origin + "/" + content.id %>>Change Image</a>
+          </div>
+        </div>
+        
+      <!-- End Images -->
+
+      <!-- Start PDF -->
+      <% if (content.contentType == "button" || content.contentType == "pdf") { %>
+        <div class="form-group" id="currentPDF">
+      <% }else{ %>
+        <div class="form-group" id="currentPDF" style="visibility: hidden; max-height: 0px;">
+      <% } %>
+        <p> Current PDF:</p>
+        <div class="pdf_reader_wrapper" style="display:table;">
+          <embed src="<%= content.imagePath %>" width="700px" height="600px" type="application/pdf">
+        </div>
+        <div>
+          <a class="btn-warning" href=<%="/editimage/" + origin + "/" + content.id %>>Change PDF</a>
+        </div>
+      </div>
+
+      <!-- End PDF -->
+
+      <% if (content.contentType == "video") {%>
+        <div class="form-group" id="currentVido">
+      <% }else{ %>
+        <div class="form-group" id="currentVideo" style="visibility: hidden; max-height: 0px;">
+      <% } %>
+        <p> Current Video:</p>
+         <video width="900" controls>
+          <source src="<%= content.imagePath %>" type="video/mp4">
+        </video>
+        <div>
+          <a class="btn-warning" href=<%="/editimage/" + origin + "/" + content.id %>>Change Video</a>
+        </div>
+      </div>
+      <!-- End PDF -->
+
+      <br>
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href=<%= "/" + origin %> class="btn btn-primary">Cancel</a>
+    </form>
+    <br>
+    <br>
+    <br>
+    <div><b>WARNING! This will permanently delete this item.</b></div>
+    <a class="btn-danger btn" href=<%="/delete/" + origin + "/" + content.id %>>Delete</a>
+    <br><br>
+  </div>

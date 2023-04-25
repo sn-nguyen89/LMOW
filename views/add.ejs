@@ -1,0 +1,47 @@
+
+  <div style="padding-top: 200px; width: 75%; margin: auto;" >
+    <h1 class="page-header">Edit Content</h1>
+    <form action=<%= "/add/" + page %> method="POST">
+  
+      <!-- Start Title -->
+      <div class="form-group">
+        <label for="title">Name</label>
+        <input type="text" class="form-control" id="titleInput" placeholder="Enter supporter name" name="title">
+      </div>
+      <!-- End Title -->
+      
+      <!-- Start Buttons -->
+      <div style="display: inline-flex; width: 100%;">
+        <div class="form-group" style="flex: 10%;">
+          <label for="importance">Supporter Type. This is used for the filtering</label>
+          <div class="radio">
+            <input type="radio" id="button-radio-1" value="supporters" name="contentType" checked>
+            <label for="button-radio-1">Supporters</label>
+          </div>
+          <div class="radio">
+            <input type="radio" id="button-radio-2" value="lmow" name="contentType">
+            <label for="button-radio-2">LMOW Partners</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Images -->
+        <div class="form-group">
+          <p> Image can be added after using edit.</p>
+          <div class="row">
+          </div>
+          <div class="ml-auto mr-auto">
+            
+          </div>
+        </div>
+      <!-- End Images -->
+
+
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href=<%= page %> class="btn btn-primary">Cancel</a>
+    </form>
+    <br>
+    <br>
+    <br><br>
+  </div>

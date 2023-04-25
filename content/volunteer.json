@@ -1,0 +1,105 @@
+{
+	"page": "volunteer",
+	"details": [
+		{
+			"id": 1,
+			"title": "Deliver Meals",
+			"description": "Drivers to deliver meals. Monday - Friday between 11:00am - 1:30pm\n Must have a valid car insurance and driver's license. Permanent routes or on call available.",
+			"imagePath": "/images/drivers.png",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 2,
+			"title": "Pack Meals",
+			"description": "Ensuring that hot and frozen meals are packed from the kitchen into the appropriate routes for volunteer drivers.\n Monday - Friday between 9:30 -11:00am\n Must be able to lift 20lbs",
+			"imagePath": "/images/Packers.png",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 3,
+			"title": "Seal Meals",
+			"description": "Ensuring that hot meals are sealed prior to being delivered.\n Monday - Friday 10:00am-11:30am",
+			"imagePath": "/images/sealer.jpg",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 4,
+			"title": "Help Our Kitchen",
+			"description": "Chopping and peeling vegetables\n General meal prep\n Supporting the chef in tasks\n Washing dishes\nPacking meals\nSealing meals",
+			"imagePath": "/images/KitchenPrep.jpg",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 5,
+			"title": "Office Support",
+			"description": "Answering phones\n Shredding\n Cleaning bags\n Greeting volunteers and clients\n Phoning clients to do check ins\nLight office cleaning\n Monday-Friday 11:00am-2:00pm",
+			"imagePath": "/images/office.jpg",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 6,
+			"title": "Join our team and make a difference!",
+			"description": "",
+			"imagePath": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "banner"
+		},
+		{
+			"id": 7,
+			"title": "Helping the Community",
+			"description": "As a Society, we realize that without our team of committed and caring community volunteers, LMOW could not fulfill our mission of helping those in our community who avail themselves of our services. We rely on many volunteers to support our clients - meal deliver and packing, working in our kitchen and general office help. Contact us for more information on how you can help.",
+			"imagePath": "/images/volunteer_main.png",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "intro"
+		},
+		{
+			"id": 8,
+			"title": "Start your application today!",
+			"description": "Note: A Police Information Check (PIC) is required to volunteer. If your PIC has expired or you don't have one, we can help you get your PIC completed (at no cost).\n\nIf you are interested in volunteering:\n- Download the volunteer application and waiver below.\n- Fill out the fields in both forms (do not sign)\n- Email your completed forms to info@lmow.ca.\n- We will contact you to setup a time to come in and chat about your application and to sign both forms.",
+			"imagePath": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "outro"
+		},
+		{
+			"id": 9,
+			"title": "",
+			"description": "",
+			"imagePath": "/PDFs/VolunteerApplication.pdf",
+			"hasButton": "True",
+			"buttonText": "Volunteer Application",
+			"buttonLink": "/PDFs/VolunteerApplication.pdf",
+			"contentType": "button"
+		},
+		{
+			"id": 9,
+			"title": "",
+			"description": "",
+			"imagePath": "/PDFs/VolunteerWaiver.pdf",
+			"hasButton": "True",
+			"buttonText": "Volunteer Waiver",
+			"buttonLink": "/PDFs/VolunteerWaiver.pdf",
+			"contentType": "button"
+		}
+	]
+}

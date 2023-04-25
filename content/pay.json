@@ -1,0 +1,35 @@
+{
+	"page": "pay",
+	"details": [
+		{
+			"id": 0,
+			"title": "We make paying your bill easy!",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "banner"
+		},
+		{
+			"id": 1,
+			"title": "Payment Options",
+			"description": "- Cheque or cash can be sent with your driver.\n- Cheques can be mailed to our office: <b>20414 Douglas Crescent, Langley, BC V3A 4B4</b>. Please make sure you include the client's name if you are paying on behalf of someone else.\n- Pay over the phone with a credit card. Call <b>604.533.1679</b> Monday through Friday between 9:00am and 3:00pm\n- Setup a credit card over the phone to automatically pay your invoice at the end of each month.\n- Pay with cash, cheque or a debit/credit card at our office Monday through Friday between 9:00am and 3:00pm",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "textBlock"
+		},
+		{
+			"id": 2,
+			"title": "On-line Payment Options",
+			"description": "- Pay with interac e-transfer. Send payments to <b>info@lmow.ca</b> and ensure you reference the client's name.\n- Pay with PayPal. Enter your name and total payment, and then click the <b>PayPal</b> button below.",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "payBox"
+		}
+	]
+}

@@ -1,0 +1,17 @@
+<div class="all-page-title page-breadcrumb-volunteers">
+    <div>Select a new image to upload</div>
+</div>
+    <div class="container text-center">
+        
+        <div class="col-lg-12">
+            <h1>Upload New Image</h1>
+        </div>
+        <div class="row"></div>
+                <br>
+                <form ref='uploadForm' id='uploadForm' action=<%= "/updateimage" + origin%> method='post' encType="multipart/form-data">
+                    <input type="file" name="sampleFile" />
+                    <input type='submit' value='Upload!' />
+                </form>     
+                <br><br>
+        </div>
+    </div>

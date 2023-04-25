@@ -1,0 +1,147 @@
+	<!-- Start Banner -->
+	<div class="all-page-title page-breadcrumb-volunteers">
+		<div class="container text-center">
+			<div class="row">
+				<% page.details.forEach(function (contentBox) { %>
+					<% if (contentBox.contentType == "banner") { %>
+						<div class="col-lg-12" >
+							<h1 class="lead"><%- contentBox.title %></h1>
+							<span class="lead" style="color: white; font-size: x-large;">
+								<% const textArray = contentBox.description.split("\n"); %>
+								<br/>
+								<a class="btn btn-lg btn-circle btn-outline-new-orange" style="color: white" href="/shift"
+								style="margin-bottom:16px">Pick up Shifts
+							</a>
+								<% textArray.forEach(function (text) { %>
+									<%- text %>
+									<br>
+								<% }) %>
+								<br>	
+								<%if (contentBox.hasButton == "True") { %>
+								<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+								<%}%>
+							</span>
+							<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+							<%}%>
+						</div>
+				<% }}); %>
+			</div>
+		</div>
+	</div>
+	<!-- End Banner -->
+
+	<!-- Start Intro -->
+	<div class="about-section-box" style ="background-color: lightgrey;">
+		<div class="container">
+			<div class="row" style =  'padding-top: 30px;'>
+				<% page.details.forEach(function (contentBox) { %>
+					<% if (contentBox.contentType == "intro") { %>
+						<div class="col-lg-6 col-md-12 col-sm-12">
+							<img src="<%=contentBox.imagePath %>" class="img-fluid" style= "max-height: 400px;"><br /><br />
+						</div>
+						
+						<div class="col-lg-6 col-md-12 col-sm-12 text-center">
+							<div class="inner-column text-left">
+								<h1> <%- contentBox.title %></h1>
+								<p style = "font-size: 20px; color: black">
+									<% const textArray = contentBox.description.split("\n"); %>
+
+									<% textArray.forEach(function (text) { %>
+										<%- text %>
+										<br>
+									<% }) %>
+									<%if (contentBox.hasButton == "True") { %>
+										<a class = "btn btn-lg btn-circle btn-outline-new-orange" style = "width:100%"href="<%=contentBox.buttonLink%>"><%= contentBox.buttonText%></a>
+									<%}%>
+									
+								</p>
+							</div>
+							<% if(user) { %>
+								<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+							<%}%>
+						</div>
+						
+				<% }}); %>
+			</div>
+		</div>
+	</div>
+	<!-- End Intro-->>
+
+	<!-- Start Content Box -->
+	<div class="stuff-box">
+		<div class="container">
+			<div class="row">
+				<%page.details.forEach(function(contentBox){%>
+					<% if (contentBox.contentType == "contentBox") { %>
+						<div class="col-md-4 col-sm-6">
+							<div class="blog-img-box">
+								<div>
+									<div class="c--anim-btn"style="text-align: center;">
+										<span class="c-anim-btn">
+											<p><img src=<%=contentBox.imagePath%> style="margin-top:-5px; max-height: 300px; filter: blur(2px)"> </a></p>
+											<h2 class ="bg-text" style="font-size: xx-large; "><b><%-contentBox.title%></b></h2>
+										</span>
+										<p style = "font-size: 20px; color: black">
+											<% const textArray = contentBox.description.split("\n"); %>
+		
+											<% textArray.forEach(function (text) { %>
+												<%- text %>
+												<br>
+											<% }) %>
+											<br>	
+											<%if (contentBox.hasButton == "True") { %>
+											<a class="btn-lg btn-circle btn-outline-new-orange" style="color: white" href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+											<%}%>
+										</p>
+									</div>
+								</div>
+								<% if(user) { %>
+								<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+								<%}%>
+							</div>
+
+						</div>
+				<% }}) %>	
+			</div>
+		</div>
+	</div>
+	<!-- End Volunteer -->
+	<div class="container">
+		<%page.details.forEach(function(contentBox){%>
+			<% if (contentBox.contentType == "outro") { %>
+				<h1 style ="text-align:center; font-size: 75px;"><%- contentBox.title %></h1>
+
+				<span style="font-size: larger;  color: black;">
+
+					<% const textArray = contentBox.description.split("\n"); %>
+
+					<% textArray.forEach(function (text) { %>
+					<%- text %>
+					<br>
+					<% }) %>
+					<br>
+					<%if (contentBox.hasButton == "True") { %>									
+					<a class="btn-lg btn-circle btn-outline-new-orange" href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+					<% } %>
+				</span>
+				<% if(user) { %>
+				<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+				<%}%>
+
+		<% }}); %>
+		<div class="row">
+			<div style="margin:auto; width: 50%">
+				<%page.details.forEach(function(contentBox){%>
+					<% if (contentBox.contentType == "button") { %>
+						<a class="btn btn-lg btn-circle btn-outline-new-orange" style='background-color: rgb(189, 125, 22); border: none;' onMouseOver="this.style.backgroundColor='#008000';"
+						onMouseOut="this.style.backgroundColor='rgb(189, 125, 22)'" href="<%= contentBox.buttonLink %>" target="_blank"><%= contentBox.buttonText %></a>
+						<% if(user) { %>
+						<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+						<%}%>		
+				<% }}); %>
+
+			</div>
+		</div>
+		<br><br>
+    </div>

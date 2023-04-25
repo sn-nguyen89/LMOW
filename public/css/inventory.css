@@ -1,0 +1,80 @@
+  .table {
+    width: 100%;
+  }
+  .table thead th {
+    padding: 10px 10px;
+    background: rgb(255, 166, 0);
+    font-size: 15px;
+    text-transform: uppercase;
+    vertical-align: top;
+    color: black;
+    font-weight: normal;
+    text-align: left;
+  }
+  .table tbody tr td {
+    padding: 10px;
+    background: #f2f2f2;
+    font-size: 14px;
+  }
+  
+  .add,
+  .edit,
+  .save,
+  .delete {
+    outline: none;
+    background: none;
+    border: none;
+  }
+  
+  .edit,
+  .save,
+  .delete {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .add {
+    float: right;
+    background: transparent;
+    border: 2px solid #009879;
+    color: black;
+    font-size: 13px;
+    padding: 0;
+    padding: 3px 5px;
+    cursor: pointer;
+  }
+  .add:hover {
+    background: #ffffff;
+    color: #00adee;
+  }
+  
+  .save {
+    display: none;
+    background: #32ad60;
+    color: #ffffff;
+  }
+  .save:hover {
+    background: #27854a;
+  }
+  
+  .edit {
+    background: #2199e8;
+    color: #ffffff;
+  }
+  .edit:hover {
+    background: #147dc2;
+  }
+  
+  .delete {
+    background: #ec5840;
+    color: #ffffff;
+  }
+  .delete:hover {
+    background: #e23317;
+  }
+  .btn-sm{
+    background:#008000;
+  }
+  .margin-tab{
+    margin-bottom: 10px;
+  }

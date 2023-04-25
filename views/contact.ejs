@@ -1,0 +1,27 @@
+<div class="all-page-title page-breadcrumb-contact">
+    <div class="container text-center">
+        <div class="row">
+            <% page.details.forEach(function (contentBox) { %>
+                <% if (contentBox.contentType == "banner") { %>
+                    <div class="col-lg-12" >
+                        <h1 class="lead"><%- contentBox.title %></h1>
+                        <span class="lead" style="color: white; font-size: x-large;">
+                            <% const textArray = contentBox.description.split("\n"); %>
+
+                            <% textArray.forEach(function (text) { %>
+                                <%- text %>
+                                <br>
+                            <% }) %>
+                            <br>	
+                            <%if (contentBox.hasButton == "True") { %>
+                            <a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+                            <%}%>
+                        </span>
+                        <% if(user) { %>
+                        <a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+                        <% } %>
+                    </div>
+            <% }}); %>
+        </div>
+    </div>
+</div>

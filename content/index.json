@@ -1,0 +1,125 @@
+{
+	"page": "index",
+	"details": [
+		{
+			"id": 1,
+			"title": "Meal Delivery",
+			"description": "Meals are delivered between 11:15 -1:30 – Monday – Friday Meals are delivered hot and by our dedicated team of volunteers Wellness checks and friendly face",
+			"hasButton": "True",
+			"buttonText": "Meal Delivery",
+			"buttonLink": "/mealdelivery",
+			"imagePath": "/images/delivery.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 2,
+			"title": "Programs",
+			"description": "LMOW is more than meal delivery. We also have social, wellness and health programs",
+			"hasButton": "True",
+			"buttonText": "Learn More",
+			"buttonLink": "/programs",
+			"imagePath": "/images/programs.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 3,
+			"title": "Register Now",
+			"description": "Please fill out the new client form or call us to register",
+			"hasButton": "True",
+			"buttonText": "Sign Up Now",
+			"buttonLink": "/mealdelivery",
+			"imagePath": "/images/register.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 4,
+			"title": "Aldergrove Community Station Hub",
+			"description": "The proposed ACSH incorporates the Neighborhood House model and Community Food Centre model under one roof ~ support for children, youth, families and seniors living with food security issues to access food services in a welcoming place. ",
+			"hasButton": "True",
+			"buttonText": "Learn More",
+			"buttonLink": "/aldergrove",
+			"imagePath": "/images/community.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 5,
+			"title": "Contact Us",
+			"description": "For more information please contact us at 604-533-1679 or info@lmow.ca Monday – Friday 8:30-4:00pm",
+			"hasButton": "True",
+			"buttonText": "Contact Us",
+			"buttonLink": "/contact",
+			"imagePath": "/images/contact.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 6,
+			"title": "Pay Bills",
+			"description": "Invoices will be delivered via email, mail or with your driver the first week of each month.\r\nPay your monthly invoice by:\r\nCash, Cheque,\r\nCredit/Debit Card,\r\nE-Transfer,\r\nPayPal",
+			"hasButton": "True",
+			"buttonText": "Learn More",
+			"buttonLink": "/pay",
+			"imagePath": "/images/bills.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 7,
+			"title": "Volunteer",
+			"description": "Volunteers have many opprotunities such as: - meal deliver and packing, working in our kitchen and general office help. Contact us for more information on how you can help",
+			"hasButton": "True",
+			"buttonText": "View Opportunities",
+			"buttonLink": "/volunteer",
+			"imagePath": "/images/volunteer.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 8,
+			"title": "Donate",
+			"description": "Cash donations are accepted and can go toward our programs and meal subsidy. More information can be found on the donate page.",
+			"hasButton": "True",
+			"buttonText": "Learn More",
+			"buttonLink": "/donate",
+			"imagePath": "/images/donate.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 9,
+			"title": "COVID-19 Updates",
+			"description": "Protecting our clients, volunteers, and staff is a priority. Click here to see our COVID-19 Updates",
+			"hasButton": "True",
+			"buttonText": "Covid-19 Updates",
+			"buttonLink": "/PDFs/covid-19-update.pdf",
+			"imagePath": "",
+			"contentType": "updates"
+		},
+		{
+			"id": 10,
+			"title": "Together We Deliver",
+			"description": "We have been serving fresh, wholesome meals, delivered right to your door in Langley for over 40 years. We have fresh hot meal options along with frozen options.\r\n\r\nOur caring volunteers provide friendly social interaction for those living alone. We help our clients feel safe knowing that a volunteer will check on their well-being on delivery days and we will respond quickly if an emergency arises.\r\n\r\nWe help people to retain independence in the comfort of their own homes.\r\n\r\nIn addition to our meal delivery program, we also reach our community through programs like Food & Friends and Healthy Living Bags\r\n\r\nProtecting our clients, volunteers, and staff is a priority.",
+			"hasButton": "True",
+			"buttonText": "COVID-19 UPDATE",
+			"buttonLink": "/PDFs/covid-19-update.pdf",
+			"imagePath": "/images/about-img.png",
+			"contentType": "intro"
+		},
+		{
+			"id": 11,
+			"title": "Volunteer Opportunities",
+			"description": "We're always looking for more help. Click below to learn more about how you can help support your local communitry.",
+			"hasButton": "True",
+			"buttonText": "Volunteer",
+			"buttonLink": "/PDFs/VolunteerApplication.pdf",
+			"imagePath": "",
+			"contentType": "updates"
+		},
+		{
+			"id": 12,
+			"title": "Delivering services to our community for all to be fed, connected, and supported.",
+			"description": "Contact Us\r\n(604) 533-1679",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "/images/logo22.png",
+			"contentType": "banner"
+		}
+	]
+}

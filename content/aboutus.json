@@ -1,0 +1,142 @@
+{
+	"page": "aboutus",
+	"details": [
+		{
+			"id": 0,
+			"imagePath": "/images/shannon.png",
+			"title": "Shannon Woykin",
+			"description": "Shannon is committed to ensuring that all LMOW's programs and services are accessible to everyone, enabling them to live healthy, independent lives. She has over 10 years of non-profit experience, 7 of those with Meals on Wheels. Shannon started new programs to expand LMOW's reach in the community: Home from the Hospital, Meals on Foot (school students delivering meals) Boutique Finds (social enterprise), and the new Outreach Kitchen. Shannon brings strategic thinking, creativity and strong relationship building skills to her position. What she enjoys most about Langley Meals on Wheels is helping achieve the vision of a 'Community where no one is hungry or alone.",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "intro"
+		},
+		{
+			"id": 1,
+			"title": "Amanda LaBoucane",
+			"description": "Amanda is a health leadership professional who works as a Community Health Specialist within the Population and Public Health Department at Fraser Health. She liaises with local Municipal governments, community agencies and other internal and external stakeholders to address and improve the Social Determinants of Health from an upstream, population-level health equity based approach.",
+			"role": "Chair",
+			"imagePath": "/images/Amanda.png",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "board"
+		},
+		{
+			"id": 2,
+			"title": "Kathy Reddington",
+			"description": "Kathy has been a member of the Langley Seniors Community Action Table (LSCAT) since 2013. Through her work with LSCAT she became aware of the key role that Langley Meals on Wheels plays in seniors’ healthcare. LMOW fills the gap in the healthcare system, specifically with regard to seniors and isolated seniors",
+			"role": "Vice Chair",
+			"imagePath": "/images/Kathy.jpg",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "board"
+		},
+		{
+			"id": 3,
+			"title": "Brent Mitchler",
+			"description": "Brent graduated from KPU in 2015 with a Bachelor of Business Administration in Accounting. He is a Chartered Professional Accountant in Langley for KPMG LLP and has a breadth of experience in financial reporting for a range of sectors.",
+			"role": "Treasurer",
+			"imagePath": "/images/Brent.png",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "board"
+		},
+		{
+			"id": 4,
+			"title": "Paul Crump",
+			"description": "Paul is a past chair who joined Meals on Wheels in 2008. He has worked for 43 years in the financial industry; the last 33 years with one of Canadas largest Credit Union. He serves on the board because of his passion and desire to make a difference within the Langley community.",
+			"role": "Secretary",
+			"imagePath": "/images/PaulCrump.jpg",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "board"
+		},
+		{
+			"id": 5,
+			"title": "Terry Hughes",
+			"description": "Terry is a 25 year veteran of the Banking Industry. She also has worked as a Commercial and Retail Bank Auditor,Field Investigator, Surveillance Detection Office and Private Investigator. She is the founding partner of Probe Inc.",
+			"role": "Director",
+			"imagePath": "/images/Terry.png",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "board"
+		},
+		{
+			"id": 6,
+			"title": "Deanna Horn",
+			"description": "Deanna comes from a five generation Langley Family; she believes in volunteering her time in her community. Deanna is a successful Real Estate Agent and has many community connections both at the local level and government. Deanna has an extensive background and experience in fundraising for major campaigns, strategic planning and board development and marketing skills.",
+			"role": "Director",
+			"imagePath": "/images/deanna.png",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "board"
+		},
+		{
+			"id": 7,
+			"title": "Kelly Goto",
+			"description": "Kelly is an Assistant manager at Aldergrove Financial, With over 30 years in the Credit Union system Kelly is a motivated professional with demonstrated problem solving and relationship building skills.  She brings her passion and dedication to helping her community, staff and members every day.  Kelly has extensive experience providing professional financial services and advice to help members reach their financial goals and objectives.",
+			"role": "Director",
+			"imagePath": "/images/kelly.png",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "board"
+		},
+		{
+			"id": 8,
+			"title": "A community where no one is hungry or alone",
+			"description": "",
+			"imagePath": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "banner"
+		},
+		{
+			"id": 9,
+			"title": "",
+			"description": "",
+			"imagePath": "/PDFs/2017-18-Annual-Report.pdf",
+			"hasButton": "True",
+			"buttonText": "2017-2018 AGM Report",
+			"buttonLink": "/PDFs/2017-18-Annual-Report.pdf",
+			"contentType": "button"
+		},
+		{
+			"id": 10,
+			"title": "",
+			"description": "",
+			"imagePath": "/PDFs/2018-19-Annual-Report.pdf",
+			"hasButton": "True",
+			"buttonText": "2018-2019 AGM Report",
+			"buttonLink": "/PDFs/2018-19-Annual-Report.pdf",
+			"contentType": "button"
+		},
+		{
+			"id": 11,
+			"title": "",
+			"description": "",
+			"imagePath": "/PDFs/2019-20-Annual-Report.pdf",
+			"hasButton": "True",
+			"buttonText": "2019-2020 AGM Report",
+			"buttonLink": "/PDFs/2019-20-Annual-Report.pdf",
+			"contentType": "button"
+		},
+		{
+			"id": 12,
+			"title": "",
+			"description": "",
+			"imagePath": "/PDFs/2020-2021-Annual-Report.pdf",
+			"hasButton": "True",
+			"buttonText": "2020-2021 AGM Report",
+			"buttonLink": "/PDFs/2020-2021-Annual-Report.pdf",
+			"contentType": "button"
+		}
+	]
+}

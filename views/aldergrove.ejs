@@ -1,0 +1,263 @@
+	<!-- Start All Pages -->
+	<div class="all-page-title page-breadcrumb-programs">
+		<div class="container text-center">
+			<div class="row">
+				<% page.details.forEach(function (contentBox) { %>
+					<% if (contentBox.contentType == "banner") { %>
+						<div class="col-lg-12">
+							<h1><%- contentBox.title %></h1>
+						
+							<span class="lead" style="color: white; font-size: x-large;">
+								<% const textArray = contentBox.description.split("\n"); %>
+
+								<% textArray.forEach(function (text) { %>
+									<%- text %>
+									<br>
+								<% }) %>
+								<br>	
+								<%if (contentBox.hasButton == "True") { %>
+								<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+								<%}%>
+							</span>
+							<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+							<% }%>
+					</div>
+				<% }}); %>
+			</div>
+			<form action="https://www.paypal.com/donate" method="post" target="_top" style="text-align: center;">
+				<input type="hidden" name="hosted_button_id" value="97YUYUY3MGK7G" />
+				<input type="image" src="images/donate-ACSH.png" border="0" name="submit" style= "max-height: 100px"
+					title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+				<img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
+			</form>
+		</div>
+	</div>
+	<!-- End All Pages -->
+	<!-- Start Intro -->
+	<% let contentNum = 0 %>
+	<% page.details.forEach(function (contentBox) { %>
+		<% if (contentBox.contentType == "intro") { %>
+			<% if (contentNum % 2 == 0) { %>
+				<div class="container-fluid split-container bg-gc-lt-gray-branding ">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="/images/Connections Collaboration Community.png" alt="Connections Collaboration Community" style="max-width: 44vw;">
+							<h2 style="text-align: center; font-size: xxx-large;"><%- contentBox.title %></h2>
+							<p style='font-size:x-large; text-align: center; color: black;';>
+								<% const textArray = contentBox.description.split("\n"); %>
+								<% textArray.forEach(function (text) { %>
+									<%- text %>
+									<br>
+								<% }) %>
+								<br>	
+							</p>
+							<%if (contentBox.hasButton == "True") { %>
+								<a class="btn-lg btn-circle ml-auto mr-auto btn-outline-new-orange"  style="text-align: center;" href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+							<%}%>
+						
+						</div>
+						<div class="col-sm-6">
+							<div style="text-align: center;"><img src="<%= contentBox.imagePath %>"style="margin-top:-5px; max-height: 500px"></div>
+						</div>
+						<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+
+						<% } contentNum++ %>
+					</div>
+				</div>
+		<% } else { %>
+			<div class="container-fluid split-container bg-gc-lt-gray-branding " style="background-color:#969792">
+				<div class="row">
+					<div class="col-sm-6">
+						<div style="text-align: center;"><img src="<%= contentBox.imagePath %>"style="margin-top:-5px; max-height: 500px"></div>
+					</div>
+					<div class="col-sm-6">
+						<h3><%- contentBox.title %></h3>
+						<p style='font-size:x-large; text-align: left; color: black;'>
+							<% const textArray = contentBox.description.split("\n"); %>
+							<% textArray.forEach(function (text) { %>
+								<%- text %>
+								<br>
+							<% }) %>
+							<br>	
+						</p>
+						<%if (contentBox.hasButton == "True") { %>
+							<a class="btn-lg btn-circle ml-auto mr-auto btn-outline-new-orange"  style="text-align: center;" href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+						<%}%>
+					
+					</div>
+					
+					<% if(user) {  %>
+						<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+					<% } contentNum++ %>
+				</div>
+			</div>
+		<% }}}) %>
+		<!-- End Intro -->
+
+		<div class="container-fluid bg-gc-lt-gray-branding d-flex justify-content-center ">
+			<!-- <div class="row"> -->
+				<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FVancouver&mode=AGENDA&src=aWE1N21xc3J2YjQzOWZnMWo2ODU4ZWI0bDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%234285F4" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+			<!-- </div> -->
+		</div>
+
+		<!-- Start rows -->
+		<% page.details.forEach(function (contentBox) { %>
+			<% if (contentBox.contentType == "row") { %>
+				<% if (contentNum % 2 == 0) { %>
+					<div class="container-fluid split-container bg-gc-lt-gray-branding ">
+						<div class="row">
+							<div class="col-sm-6">
+								<h2 style="text-align: center; font-size: xx-large;"><%- contentBox.title %></h2>
+								<p style='font-size: x-large; text-align: left; color: black;';>
+									<% const textArray = contentBox.description.split("\n"); %>
+									<% textArray.forEach(function (text) { %>
+										<%- text %>
+										<br>
+									<% }) %>
+									<br>	
+								</p>
+								<%if (contentBox.hasButton == "True") { %>
+									<a class="btn-lg btn-circle ml-auto mr-auto btn-outline-new-orange"  style="text-align: center;" href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+								<%}%>
+							
+							</div>
+							<div class="col-sm-6">
+								<div style="text-align: center;"><img src="<%= contentBox.imagePath %>"style="margin-top:-5px; max-height: 450px"></div>
+							</div>
+							<% if(user) {  %>
+								<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+	
+							<% } contentNum++; %>
+						</div>
+					</div>
+			<% } else { %>
+				<div class="container-fluid split-container bg-gc-lt-gray-branding " style="background-color:#969792">
+					<div class="row">
+						<div class="col-sm-6">
+							<div style="text-align: center;"><img src="<%= contentBox.imagePath %>"style="margin-top:-5px; max-height: 450px"></div>
+						</div>
+						<div class="col-sm-6">
+							<h2 style="text-align: center; font-size: xx-large;"><%- contentBox.title %></h2>
+							<p style='font-size: x-large; text-align: left; color: black;'>
+								<% const textArray = contentBox.description.split("\n"); %>
+								<% textArray.forEach(function (text) { %>
+									<%- text %>
+									<br>
+								<% }) %>
+								<br>	
+							</p>
+							<%if (contentBox.hasButton == "True") { %>
+								<a class="btn-lg btn-circle ml-auto mr-auto btn-outline-new-orange"  style="text-align: center;" href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+							<%}%>
+						
+						</div>
+						
+						<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+						<% } contentNum++; %>
+					</div>
+				</div>
+			<% }}}) %>
+		<!-- End rows-->
+			
+		<!-- Start PDFs -->
+		<% page.details.forEach(function (contentBox) { %>
+			<% if (contentBox.contentType == "pdf") { %>
+				<div class="container" style="font-size:xx-large; text-align: center;">
+					<h2 style="font-size: xx-large;"><%-contentBox.title %></h2>
+					
+					
+					<p style = "font-size: 20px; color: black; line-height: 1.5;">
+						
+						<% const textArray = contentBox.description.split("\n"); %>
+	
+						<% textArray.forEach(function (text) { %>
+							<%- text %>
+							<br>
+						<% }) %>
+						<br>
+						<% if (contentBox.imagePath !== ""){ %>
+							<div class="pdf_reader_wrapper" style="display:table; margin-left:auto; margin-right:auto;">
+								<embed src="PDFs/Our Needs.pdf" width="700px" height="600px" type="application/pdf">
+							</div>
+						<% } %>
+						<%if (contentBox.hasButton == "True") { %>
+							<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+						<%}%>
+					</p>
+					<% if(user) { %>
+					<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+					<% }%>
+					<br>
+				</div>
+		<%}})%>
+		<br><br><br>
+		<% page.details.forEach(function (contentBox) { %>
+			<% if (contentBox.contentType == "video") { %>
+				<div class="container" style="font-size:x-large; text-align: center;">
+
+					
+					<h2 style="font-size: xxx-large;"><%-contentBox.title %></h2>
+					<% if (contentBox.imagePath !== ""){ %>
+						<video width="900" controls>
+							<source src="images/nh/Neighbourhood House.mp4" type="video/mp4">
+						</video>
+					<% } %>
+					
+					<p style = "font-size:x-large; color: black; line-height: 1.5;">
+						<% const textArray = contentBox.description.split("\n"); %>
+	
+						<% textArray.forEach(function (text) { %>
+							<%- text %>
+							<br>
+						<% }) %>
+						<br>
+						<%if (contentBox.hasButton == "True") { %>
+							<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+						<%}%>
+					</p>
+					<% if(user) { %>
+					<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+					<% }%>
+					<br>
+				</div>
+		<%}})%>
+
+		<div class="container-fluid text-center">
+			<%page.details.forEach(function (contentBox){ %>
+				<% if (contentBox.contentType == "outro") { %>
+
+					<div class="col-lg-12 text-center" style='padding:16px'>
+						<h2><strong><%- contentBox.title %></strong></h2>
+						<span style = "font-size: 18px; color: black; line-height: 1;">
+							<% const textArray = contentBox.description.split("\n"); %>
+
+							<% textArray.forEach(function (text) { %>
+								<%- text %>
+								<br>
+							<% }) %>
+							<br>
+						
+							<%if (contentBox.hasButton == "True") { %>
+								<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+							<%}%>
+						</span>
+						<% if (user) { %> 
+						<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+						<% } %>
+					</div>
+			<% }})%>
+		</div>
+<!-- 
+
+
+		<form action="https://www.paypal.com/donate" method="post" target="_top" style="text-align: center;">
+			<input type="hidden" name="hosted_button_id" value="97YUYUY3MGK7G" />
+			<input type="image" src="images/donate-button.png" border="0" name="submit" style= "max-height: 100px"
+				title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+			<img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
+		</form> -->
+		<br>
+

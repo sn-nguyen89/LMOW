@@ -1,0 +1,35 @@
+<div class="all-page-title page-breadcrumb-programs">
+  <div class="container">
+    <div Style=" width: 50%; margin: 0 auto; margin-bottom: 100px;">
+
+      <!-- Uplaod form to post the news item to the server -->
+      
+      <form ref='uploadForm' id='uploadForm' action=<%= "/updateNewsImages"%> method='post' encType="multipart/form-data">
+      <div class="mb-3">
+        <h1 class="display-4" style="text-align: center;">Add a news item!</h1>
+        <label for="TextInput" class="form-label text-light">Title</label>
+        <input type="text" name="titleForm" class="form-control" placeholder="title">
+      </div>
+      <div class="mb-3">
+        <label for="TextInput" class="form-label text-light">News body</label>
+        <input type="text" name="bodyForm" class="form-control" placeholder="body">
+      </div>
+      <div class="mb-3">
+        <label for="TextInput" class="form-label text-light">Button redirect path</label>
+        <input type="text" name="buttonForm" class="form-control" placeholder="path">
+      </div>
+
+      <div class="mb-3">
+        <label for="TextInput" class="form-label text-light">Image path</label>
+        <input type="text" name="imageForm" class="form-control" placeholder="path">
+      </div>
+      <br>
+      <div class="mb-3">
+        <input type="file" name="sampleFile" />
+        <input class="btn btn-primary btn-success" id ="submitButton" type='submit' value='Submit' />
+      </div>
+    </form>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,66 @@
+{
+	"page": "programs",
+	"details": [
+		{
+			"id": 1,
+			"imagePath": "/images/foodsandfamily.png",
+			"title": "Food and Friends",
+			"description": "Seniors (55+) are invited to participate in a monthly virtual luncheon.\r\n\r\nJoin us and guest speakers as we create a safe space to socialize and learn. \r\n\r\nPresentations are on Zoom.",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 2,
+			"imagePath": "/images/medwatch.jpg",
+			"title": "Medwatch Program",
+			"description": "Get your vital medical information and health care wishes to emergency responders and physicians in emergency situations. We work in partnership with Langley Division of Family Practice to help seniors complete their MedWatch forms and document Advance Care Planning wishes. \nCall us to arrange for a volunteer visit one on one.",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 3,
+			"imagePath": "/images/bc211.jpg",
+			"title": "BC211",
+			"description": "Community Resource Guide.\n Local community resource guide for Langley seniors. Looking for a phone number or link? Try checking here first!\n bc211.ca is a nonprofit organization that specializes in providing information and referral regarding community, government and social services in BC.",
+			"linkTitle": "bc211",
+			"hasButton": "True",
+			"buttonText": "bc211",
+			"buttonLink": "https://bc.211.ca/",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 4,
+			"imagePath": "/images/healthylivingbags2.png",
+			"title": "Healthy Living Bags",
+			"description": "Providing fresh fruit & vegetables\nThe Healthy Living Bag contains a variety of fresh fruit and vegetables.\nDelivered or Pickup on the 1st Tuesday of every month. \n\nOrder Deadline: the Thursday prior to delivery",
+			"buttonLink": "https://anc.ca.apm.activecommunities.com/langleycityrecconnect/home?onlineSiteId=0&from_original_cui=true",
+			"buttonText": "Order Bag",
+			"hasButton": "True",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 5,
+			"imagePath": "/images/Homefromhospital2.png",
+			"title": "Home From the Hospital",
+			"description": "We also provide meals for those at-risk who are coming home after a stay at our local hospital. This program provides 5 days of free meal delivery, along with the watchful eye of our caring volunteers.",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 6,
+			"imagePath": "",
+			"title": "Together we deliver more than just meals!",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"contentType": "banner"
+		}
+	]
+}

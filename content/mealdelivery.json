@@ -1,0 +1,55 @@
+{
+	"page": "mealdelivery",
+	"details": [
+		{
+			"id": 1,
+			"title": "Menu",
+			"description": "Our meals include a nutritious balance of protein, starch and vegetables and are low in sodium, sugar and fat. \n7.50 Hot Meal \n7.50 Frozen Meal \n4.00 Sandwich \n**Both hot and frozen meals include soup and dessert",
+			"hasButton": "True",
+			"buttonText": "Menu",
+			"buttonLink": "/PDFs/LMOW_Menu_December_2021.pdf",
+			"imagePath": "/images/menu.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 2,
+			"title": "Sign Up",
+			"description": "To have meals delivered or to pickup meals from our office, you need to create an account. You can setup an account by: \n1. Calling our office at 604-533-1679. The process takes less than ten minutes. \n2. Download the New Client Registration, complete the form and email it to mealdesk@lmow.ca. ",
+			"hasButton": "True",
+			"buttonText": "Learn More",
+			"buttonLink": "/signup",
+			"imagePath": "/images/register.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 3,
+			"title": "Special Inquiries",
+			"description": "If you require further information or subsidy please contact us at 604-533-1679",
+			"hasButton": "True",
+			"buttonText": "Inquire",
+			"buttonLink": "/contact",
+			"imagePath": "/images/inquiry.png",
+			"contentType": "contentBox"
+		},
+		{
+			"id": 4,
+			"title": "Pick Up and Delivery Options",
+			"description": "We deliver meals Monday through Friday between 11:30am and 1:30pm.\r\nMeals can also be picked up at our office between noon and 2pm, Monday through Friday.\r\nWe deliver to Langley City and the Township of Langley(including Aldergrove).\r\n\r\n<b>* We do not deliver on statutory holidays *</b>",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "/images/NH did you know.png",
+			"contentType": "intro"
+		},
+		{
+			"id": 5,
+			"title": "Welcome to our Meal Options",
+			"description": "No one should go hungry",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "banner"
+		}
+	]
+}

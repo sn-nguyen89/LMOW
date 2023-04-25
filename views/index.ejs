@@ -1,0 +1,163 @@
+﻿
+<!-- Start banner -->
+<div class="all-page-title page-breadcrumb-home">
+	<div class="container-fluid"><br>
+		<div class="row">
+			<% page.details.forEach(function (contentBox) { %>
+				<% if (contentBox.contentType == "banner") { %>
+					<img class="ml-auto mr-auto banner-content banner-image" src="<%= contentBox.imagePath%>">
+					
+					<!--<div><img style="display: inline-flexbox;" src="images/BIGLOGO.png"></div>-->
+					<div class="container col-lg-6 col-md-12 col-sm-12 text-center">
+						
+						<h1><%- contentBox.title %></h1><br>
+						<div>
+							<a class="btn btn-lg btn-circle btn-outline-new-white" href="/mealdelivery"
+								style="margin-bottom:16px; margin-right:8px"> Learn More</a>
+							<a class="btn btn-lg btn-circle btn-outline-new-white" href="/PDFs/LMOW_Menu_December_2021.pdf"
+								style="margin-bottom:16px; margin-right:8px">Our Menu</a>
+							<a class="btn btn-lg btn-circle btn-outline-new-orange" href="/signup"
+								style="margin-bottom:16px">Sign Me Up 
+							</a>
+						</div>
+					</div>
+					<!-- <h1 class="mr-auto ml-auto text-center banner-content" style="font-size: 30px;"> Contact Us <br> (604) 533-1679</h1> -->
+					<h1 class="mr-auto ml-auto text-center banner-content" style="font-size: 30px;">
+						<% const textArray = contentBox.description.split("\n"); %>
+
+						<% textArray.forEach(function (text) { %>
+							<%- text %>
+							<br>
+						<% }) %>
+						<br>	
+						<%if (contentBox.hasButton == "True") { %>
+						<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+						<%}%>
+						<% if(user) { %>
+						<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+						<% } %>
+					</h1>
+			<% }}); %>
+		</div>
+	</div>
+	<br>
+</div>
+<!-- End Banner -->
+
+<!-- Start Updates -->
+<div class="qt-box covid-background all-page-title">
+	<div class="container">
+		<p class="text-center "> News and Updates </p>
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="1000000">
+			<div class="carousel-inner">
+				<!-- Dynamically add news here -->
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+		<!-- <button type="button" class="btn btn-success horizontal-center admin-btn" hidden>Add Notification Item</button> -->
+		<a class="btn btn-success btn-outline-new-orange horizontal-center admin-btn" href="/news" hidden>Add News</a>
+	</div>
+</div>
+</div>
+
+<!-- End Updates -->
+
+<!-- Start About -->
+<div class="about-section-box" style="background-color: lightgrey;">
+	<div class="container">
+		<div class="row" style='padding-top: 30px;'>
+			<% page.details.forEach(function (contentBox) { %>
+				<% if (contentBox.contentType=="intro" ) { %>
+					<div class="col-lg-6 col-md-12 col-sm-12" style="margin: auto;">
+						<img src="<%=contentBox.imagePath %>" class="img-fluid"><br /><br>
+						<%if (contentBox.hasButton=="True" ) { %>
+							<a class="btn btn-lg btn-circle btn-outline-new-orange" style="width:100%"
+								href="<%=contentBox.buttonLink%>">
+								<%= contentBox.buttonText%>
+							</a>
+							<%}%>
+								<br />
+					</div>
+
+					<div class="col-lg-6 col-md-12 col-sm-12 text-center">
+						<div class="inner-column text-left">
+							<h1>
+								<%- contentBox.title %>
+							</h1>
+							<p style="font-size: 18px; color: black">
+								<% const textArray=contentBox.description.split("\n"); %>
+
+									<% textArray.forEach(function (text) { %>
+										<%- text %>
+											<br>
+											<% }) %>
+
+							</p>
+							<h1 style="font-size: 20px;">Shannon Woykin, Executive Director</h1>
+						</div>
+					</div>
+					<% if(user) { %>
+						<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+						<%}%>
+							<% }}); %>
+		</div>
+	</div>
+</div>
+<!-- End About -->
+
+<!-- Start Page Details -->
+<div class="about-section-box">
+	<div class="container">
+
+		<!-- Start Content Boxes -->
+		<div class="blog-box">
+			<div class="container">
+				<div class="row">
+					<% page.details.forEach(function (contentBox) { %>
+						<% if (contentBox.contentType=="contentBox" ) { %>
+							<div class="col-md-3 col-sm-6">
+
+								<div class="c--anim-btn" style="text-align: center;">
+
+									<span class="c-anim-btn">
+										<p><img src=<%=contentBox.imagePath %> style="margin-top:-5px;"> </a></p>
+										<h2 style="font-size: xx-large;"><b>
+												<%- contentBox.title %>
+											</b></h2>
+									</span>
+									<span style="font-size: larger;">
+										<% const textArray=contentBox.description.split("\n"); %>
+
+											<% textArray.forEach(function (text) { %>
+												<%- text %>
+													<br>
+													<% }) %>
+														<br>
+														<%if (contentBox.hasButton=="True" ) { %>
+															<a class="btn-lg btn-circle btn-outline-new-orange"
+																href=<%=contentBox.buttonLink %>><%=
+																	contentBox.buttonText %></a>
+															<%}%>
+									</span>
+								</div>
+								<% if(user) { %>
+									<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+									<% } %>
+							</div>
+							<% }}); %>
+				</div>
+			</div>
+		</div>
+		<!-- End Content Boxes -->
+	</div>
+</div>
+<!-- End Page Details -->
+
+<script src="/js/home.js"></script>

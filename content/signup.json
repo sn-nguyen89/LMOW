@@ -1,0 +1,55 @@
+{
+	"page": "signup",
+	"details": [
+		{
+			"id": 0,
+			"title": "There is no minimum order required and no limitations on who can receive meals!",
+			"description": "No one should go hungry",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "banner"
+		},
+		{
+			"id": 1,
+			"title": "Sign Me Up",
+			"description": "To have meals delivered or to pickup meals from our office, you need to create an account. You can setup an account by:\n1. Calling our office at <b>604-533-1679</b>. The process takes less than ten minutes.\n2. Download the New Client Registration, complete the form and email it to <b>mealdesk@lmow.ca</b>.\n\n<b>** Please make sure to have contact information and a delivery address available if you are signing up a client on their behalf **</b>",
+			"hasButton": "True",
+			"buttonText": "New Client Registration",
+			"buttonLink": "/PDFs/NewClient.pdf",
+			"imagePath": "",
+			"contentType": "intro"
+		},
+		{
+			"id": 3,
+			"title": "How to Order Meals",
+			"description": "- Setup a meal plan (when you setup your account) if you want meals to be delivered regularly without having to call to order.\n- Let us know if you want frozen meals automatically delivered before statutory holidays.\n- To place an order, call our office 2 weekdays before you want a meal delivered.\n- Whenever possible, give us 2 weekdays' notice for any order changes and cancellations.\n- Let us know about any special meal requests, delivery instructions, or meal preferences.",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "textBlock"
+		},
+		{
+			"id": 4,
+			"title": "How to Pay For Your Meals",
+			"description": "An invoice will be delivered via email, mail or with your driver the first week of each month for meals purchased the previous month.\nPay your monthly invoice by:\n- Cash\n- Cheque\n- Credit/Debit Card\n- E-transfer\n- PayPal",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "textBlock"
+		},
+		{
+			"id": 5,
+			"title": "",
+			"description": "<b>If you are a Veteran, you may be able to get the costs of your meals paid by Veteran Affairs.\nPlease call 1-866-522-2122 to inquire about eligibility.</b>",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "outro"
+		}
+	]
+}

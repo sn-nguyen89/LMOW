@@ -1,0 +1,35 @@
+{
+	"page": "donate",
+	"details": [
+		{
+			"id": 0,
+			"title": "1",
+			"description": "With your help, Langley Meals on Wheels has been 'people helping people' for over 42 years. Together, we have been able to continue to serve our community's most vulnerable – including seniors, families and those at risk.\nWhen you give to Langley Meals on Wheels, your dollars go directly to programs that are feeding and supporting children, youth, families and seniors. Your support makes our community stronger! ",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "",
+			"contentType": "intro1"
+		},
+		{
+			"id": 1,
+			"title": "2",
+			"description": "Langley Meals on Wheels produces healthy and nutritious food in the kitchen growing and expanding the reach with the new Aldergrove Community Station House - this is a partnership with various organizations that allow us to continue to provide food and supports to all of Langley.",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "images/donate1.png",
+			"contentType": "intro2"
+		},
+		{
+			"id": 2,
+			"title": "",
+			"description": "",
+			"hasButton": "False",
+			"buttonText": "",
+			"buttonLink": "",
+			"imagePath": "images/aldergrove-CSH.png",
+			"contentType": "textBlock"
+		}
+	]
+}

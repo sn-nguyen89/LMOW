@@ -1,0 +1,74 @@
+	<!-- Start Banner -->
+	<div class="all-page-title page-breadcrumb-programs">
+		<div class="container text-center">
+			<div class="row">
+				<% page.details.forEach(function (contentBox) { %>
+					<% if (contentBox.contentType == "banner") { %>
+						<div class="col-lg-12">
+							<h1 class="lead"><%- contentBox.title %></h1>
+							
+							<span class="lead" style="color: white; font-size: x-large;">
+								<% const textArray = contentBox.description.split("\n"); %>
+
+								<% textArray.forEach(function (text) { %>
+									<%- text %>
+									<br>
+								<% }) %>
+								<br>
+								<%if (contentBox.hasButton == "True") { %>
+								<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+								<%}%>
+							</span>
+							<% if(user) { %>
+							<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+							<%}%>
+						</div>
+				<% }}); %>
+			</div>
+		</div>
+	</div>
+	<!-- End Banner -->
+
+	<!-- Start Content Boxes -->
+	<div class="blog-box">
+		<div class="container">
+			<div class="row">
+				<%page.details.forEach(function (contentBox){ %>
+					<% if (contentBox.contentType == "contentBox") { %>
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="blog-box-inner">
+								<div class="blog-img-box">
+									<div>
+										<div class="c--anim-btn"style="text-align: center;">
+											<span class="c-anim-btn">
+												<div style="max-height: 200px; min-height: 200px;">
+													<img src=<%=contentBox.imagePath %> style=" max-height: 200px; max-width: 350px;">
+												</div>
+												<h2 style="font-size: xx-large;"><b><%-contentBox.title%></b></h2>
+											</span>
+											<p style = "font-size: 18px; color: black">
+											<% const textArray = contentBox.description.split("\n"); %>
+
+											<% textArray.forEach(function (text) { %>
+												<%- text %>
+												<br>
+											<% }) %>
+											<br>
+										
+											<%if (contentBox.hasButton == "True") { %>
+												<a class="btn-lg btn-circle btn-outline-new-orange"  href=<%= contentBox.buttonLink %>><%= contentBox.buttonText %></a>
+											<%}%>
+											</p>
+										</div>
+									</div>
+									<% if(user) { %>
+									<a class="btn-edit" href=<%="/edit/" + page.page + "/" + contentBox.id %>>Edit</a>
+									<%}%>
+								</div>
+							</div>
+						</div>
+				<% }}) %>
+			</div>
+		</div>
+	</div>
+	<!-- Content Boxes -->
